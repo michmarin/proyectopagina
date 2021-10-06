@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href={% static 'app/css/styles.css' %}>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>ingresar al sistema</title>
+</head>
+<body id="cuerpo" background={% static 'app/img/wall.jpeg' %} >
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-6 offset-md-3">
+                <div class="card">
+                    <div id="tex" class="card-body">
+
+                        <h2>Ingresa tus credenciales</h2>
+                        <hr>
+                        <form action="" method="post">
+                            <h5>Usuario</h5>
+                            <input type="text" name="usuario">
+                            <h5>Contraseña</h5> 
+                            <input type="password" name="Contraseña"><br>
+                            <input type="submit" value="ingresar" class="btn btn-success float-right">                 
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>    
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Gamer Factory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    {% load static %}
+    <link rel="stylesheet" href={% static 'app/css/styles.css' %}>
+    
+</head>
+<body>
+
+    
+    <header id="header">
+        <img class="menu" src={% static 'app/img/menuiconwhite.png' % } alt="menu" id="menu">
+        <div class="contenedor_logo">
+            <img  class="logo"  src={% static 'app/img/logo.png' %} alt="logo">
+        </div>
+
+        <div>
+            
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="{% url 'index' %}">Inicio </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'index' %}"></a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'logout'%}">Cerrar Sesion</a>
+                    </li>
+                    <li>
+                        <a href="#">{{user.username}}</a>
+                    </li>
+                    <li>
+                        <a href="/admin">Administrar</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'login'%}">Inciar Sesion</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <div id="contenido">
+
+            <div class="slider">
+                <div>
+                    <img src={% static 'app/img/banner/banner1.png' %} alt="">
+                </div>
+                <div>
+                    <img src={% static 'app/img/banner/banner2.png' %} alt="">
+                </div>
+                <div>
+                    <img src={% static 'app/img/banner/banner3.png' %} alt="">
+                </div>
+            </div>
+
+        <h2>Productos en oferta!</h2>
+        <div class="productos">
+
+            <div class="producto">
+
+                <div class="contenedor_producto">
+
+                    <img src={% static 'app/img/alcatel.jpg' %} alt="imagen producto">
+                    <div class="detalle">
+                        <h5>Alcatel</h5>
+                        <h2>Tablet</h2>
+                        <h3>$129.990</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="producto">
+
+                <div class="contenedor_producto">
+
+                    <img src={% static 'app/img/rtx.png' %} alt="imagen producto">
+                    <div class="detalle">
+                        <h5>EVGA</h5>
+                        <h2>Nvidia GeForce RTX3090</h2>
+                        <h3>$1.990.990</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="producto">
+
+                <div class="contenedor_producto">
+
+                    <img src={% static 'app/img/hp_omen.jpg' %} alt="imagen producto">
+                    <div class="detalle">
+                        <h5>HP Omen</h5>
+                        <h2>15"Ryzen5</h2>
+                        <h3>$1.099.990</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="producto">
+
+                <div class="contenedor_producto">
+
+                    <img src={% static 'app/img/acer_aspire.jpg' %} alt="imagen producto">
+                    <div class="detalle">
+                        <h5>Acer</h5>
+                        <h2>Aspire3</h2>
+                        <h3>$699.990</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="producto">
+
+                <div class="contenedor_producto">
+
+                    <img src= {% static 'app/img/ryzen.jpg' %} alt="imagen producto">
+                    <div class="detalle">
+                        <h5>AMD</h5>
+                        <h2>Ryzen3</h2>
+                        <h3>$309.990</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="producto">
+
+                <div class="contenedor_producto">
+
+                    <img src={% static 'app/img/asus.jpg' %} alt="imagen producto">
+                    <div class="detalle">
+                        <h5>Asus</h5>
+                        <h2>Placa Madre</h2>
+                        <h3>$99.990</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="producto">
+
+                <div class="contenedor_producto">
+
+                    <img src={% static 'app/img/hyperx.jpg' %} alt="imagen producto">
+                    <div class="detalle">
+                        <h5>HyperX</h5>
+                        <h2>RAM 2x16gb DDR4 2666</h2>
+                        <h3>$199.990</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="producto">
+
+                <div class="contenedor_producto">
+
+                    <img src={% static 'app/img/psu.jpg' %} alt="imagen producto">
+                    <div class="detalle">
+                        <h5>R.O.G.</h5>
+                        <h2>Fuente poder</h2>
+                        <h3>$109.990</h3>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <footer>
+        <div class="marcas">
+            <img src={% static 'app/img/footer/microsoft.png' %} alt="microsoft">
+            <img src={% static 'app/img/footer/samsung.png' %} alt="samsung">
+            <img src={% static 'app/img/footer/xiaomi.png' %} alt="xiaomi">
+            <img src={% static 'app/img/footer/lenovo.png' %} alt="lenovo">
+            <img src={% static 'app/img/footer/apple.png' %} alt="apple">
+           
+        </div>
+        <div class="logo_footer">
+            <img src={% static 'app/img/logo.png' %} alt="logo">
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="js/menu.js"></script>
+
+    <script>
+        $(document).ready(function() {
+          $('.slider').bxSlider({
+              mode: 'fade',//horizontal, vertical, fade
+              auto: true,
+              pause: 2000
+          });
+        });
+    </script>
+
+</body>
+</html>
